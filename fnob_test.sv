@@ -1,3 +1,10 @@
+//###################################################################################
+//   Copyright (c) Facebook, Inc. and its affiliates. All Rights Reserved.
+//   The following information is considered proprietary and confidential to Facebook,
+//   and may not be disclosed to any third party nor be used for any purpose other
+//   than to full fill service obligations to Facebook
+//###################################################################################
+
 /*
  Test without CLI override:
  vcs -R -sverilog -timescale=1ns/10ps -ntb_opts uvm-1.1 -l fnob.log fnob_test.sv +UVM_TESTNAME=fnob_test
