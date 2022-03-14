@@ -1,4 +1,3 @@
-Copyright (c) Meta Platforms, Inc. and affiliates.
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
@@ -86,3 +85,11 @@ Any new random type that is highly reusable that currenlty not supported, we enc
 
 Haoxiang Hu - haoxhu@fb.com
 Tuo Wang - tuow@fb.com
+
+
+## Copyright
+
+Copyright (c) Meta Platforms, Inc. and affiliates.
+
+All licenses in this repository are copyrighted by their respective authors.
+Everything else is released under CC0. See `LICENSE` for details.
