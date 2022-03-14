@@ -23,7 +23,7 @@ Add `fnob_pkg.sv` file into your compilation flow.
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-### Generate APIs
+### General APIs
 ```
 //fnob_db::set     - Create and register fnob variable in fnob_db
 //generate a number in [300-100:300+100] that distributed in Gaussian distribution

@@ -10,7 +10,7 @@
 // Usage of each fnob random type:
 fnob_test.sv
 
-// Generate APIs //
+// General APIs //
 //fnob_db::set     - Create and register fnob variable in fnob_db
 //generate a number in [300-100:300+100] that distributed in Gaussian distribution
 fnob_db#(bit[63:0])::set("m_fnob_norm", FNOB_NORM, '{"val":'{300, 100}});
