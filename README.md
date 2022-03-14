@@ -1,3 +1,4 @@
+Copyright (c) Meta Platforms, Inc. and affiliates.
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
