@@ -28,8 +28,8 @@ fnob_db#(bit[63:0]::val("m_fnob_norm"))
 // To override within SV file:
 uvm_config_db#(string)::set(null, "*", "<fnob_name>", "<type>:<val_str>");
 
-// To CLI override in FB TB:
-RUNOPTS+="+uvm_set_config_string=\*,m_fnob_dvs_profile_delay_recon2res_p0_cfg,profile:0:10:100:1000_5:1"
+// To CLI override in TB:
+RUNOPTS+="+uvm_set_config_string=\*,m_fnob_profile_delay,profile:0:10:100:1000_5:1"
 
 
 //================================================================================
