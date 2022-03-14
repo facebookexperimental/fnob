@@ -1,7 +1,9 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-FNOB was firstly introduced in [DVCon.US 2022](https://2022.dvcon.org/press-release-march-8-2022/), and attracts lots of interests from industry.
+FNOB was firstly introduced in [DVCon.US 2022](https://2022.dvcon.org/press-release-march-8-2022/), and attracted lots of interests from industry.
+
+### TL;DR
 
 “Fnob” as Command-line Dynamic Random Generator, is a novel methodology to improve the implementation of constrained-random, with below advantages compared to conventional constraint syntax:
 * It produces less error prone testbench coding by taking advantage of predefined templates of each randomization type, which are flexible to take any number of variable sets. 
