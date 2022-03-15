@@ -32,7 +32,7 @@ fnob_db#(bit[63:0])::set("m_fnob_norm", FNOB_NORM, '{"val":'{300, 100}});
 //fnob_db::gen - query the fnob varaible for a random number
 fnob_db#(bit[63:0])::gen("m_fnob_norm"))
 
-//fnob_db::val - query the the fnob varaible for current value
+//fnob_db::val - query the fnob varaible for current value
 fnob_db#(bit[63:0]::val("m_fnob_norm"))
 ```
 
@@ -45,7 +45,7 @@ Use the `fnob_test.sv` to get more use case examples.
 uvm_config_db#(string)::set(null, "*", "<fnob_name>", "<type>:<val_str>");
 
 // To CLI override in TB:
-RUNOPTS+="+uvm_set_config_string=\*,m_fnob_profile_delay,profile:0:10:100:1000_5:1"
+runopts/plusargs:  "+uvm_set_config_string=\*,m_fnob_profile_delay,profile:0:10:100:1000_5:1"
 ```
 
 
@@ -79,6 +79,20 @@ Any new random type that is highly reusable that currenlty not supported, we enc
   
 3.3. Add your new fnob in `test_override` to test config_db override of new type;
 
+
+### Advanced Applications 
+#### fnob_reg_seq
+`fnob_reg_seq` is a `uvm_reg_seq` that flattens all `uvm_reg_field` into `fnob_type`, enabling user to pass down register field with random value directly.
+```
+//example
+fnob_seq = fb_pkg::fnob_reg_seq::type_id::create("m_fnob_seq", this);
+fnob_seq.set_root_block(rm);    //set root RAL
+fnob_seq.start(env.ahb_agent.sqr);   //start the reg seq on sequencer. 
+...
+
+//CLI interface: user could directly tweek randomization with "fnob_<reg_field_name>" 
++uvm_set_config_string=\*,fnob_hs_scaling_type_f,unif:0:3
+```
 
 <!-- CONTACT -->
 ## Contact
