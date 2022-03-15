@@ -29,10 +29,10 @@ Add `fnob_pkg.sv` file into your compilation flow.
 //generate a number in [300-100:300+100] that distributed in Gaussian distribution
 fnob_db#(bit[63:0])::set("m_fnob_norm", FNOB_NORM, '{"val":'{300, 100}});
 
-//fnob_db::gen - querry the fnob varaible for a random number
+//fnob_db::gen - query the fnob varaible for a random number
 fnob_db#(bit[63:0])::gen("m_fnob_norm"))
 
-//fnob_db::val - querry for the fnob varaible for current value
+//fnob_db::val - query the the fnob varaible for current value
 fnob_db#(bit[63:0]::val("m_fnob_norm"))
 ```
 
