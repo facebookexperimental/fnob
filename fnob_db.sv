@@ -7,6 +7,7 @@
 `ifndef __FNOB_DB_SV__
   `define __FNOB_DB_SV__
 
+
 class fnob_db#(type T=bit[63:0]) extends uvm_object;
 
   `uvm_object_utils(fnob_db)
@@ -68,13 +69,21 @@ class fnob_db#(type T=bit[63:0]) extends uvm_object;
 
   static function bit check(string fname);
     if(m_fnob_pool.exists(fname)) begin
-      `uvm_info("fnob_db", $psprintf("check:: %s exists in the m_fnob_pool", fname), UVM_HIGH)
+      `uvm_info("fnob_db", $psprintf("check:: %s exists in the m_fnob_pool", fname), UVM_LOW)
       return 1;
     end else begin
-      `uvm_info("fnob_db", $psprintf("check:: %s does not exist in the m_fnob_pool", fname), UVM_HIGH)
+      `uvm_info("fnob_db", $psprintf("check:: %s does not exist in the m_fnob_pool", fname), UVM_LOW)
       return 0;
     end
   endfunction: check
+  
+  //check certain fnob has cli/inline cfg_db ovrd or not
+  static function bit has_ovrd(string fname);
+    fnob#(T) fnob_tmp;
+    fnob_tmp = get(fname); 
+    `uvm_info("fnob_db", $psprintf("has_ovrd:: %s has_ovrd: %0d", fname, fnob_tmp.is_set()), UVM_LOW)
+    return fnob_tmp.is_set();
+  endfunction: has_ovrd
 
   static function T gen(string fname);
     fnob#(T) fnob_tmp;
